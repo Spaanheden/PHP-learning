@@ -3,6 +3,7 @@
 // require 'task.php';
 
 
-$database =require 'core\bootstrap.php';
+require 'core/bootstrap.php';
 
-
+Require Router::load('routes.php')
+	->direct(Request::uri());
