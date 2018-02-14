@@ -3,10 +3,6 @@
 // require 'task.php';
 
 
-$query =require 'bootstrap.php';
+$database =require 'core\bootstrap.php';
 
 
-$tasks = $query->selectAll('todos');
-
-
-require 'index.view.php';
