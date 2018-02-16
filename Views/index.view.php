@@ -1,24 +1,15 @@
-<!DOCTYPE html>
-
-<html lang="en">
-
-<head>
-	<Meta charset="UTF-8">
-	<title>Document</title>
-</head>
+<?php require('partials/head.php'); ?>
 
 
-<body>
-	<ul>
-		<?php foreach ($tasks as $task) : ?>
-			<li>
-				<?php if ($task->completed) : ?>
-					<strike><?= $task->description; ?></strike>
-				<?php else: ?>
-					<?= $task->description; ?>
-				<?php endif; ?>
-			</li>
-		<?php endforeach; ?>
-	</ul>
-</body>
-</html>
+<h1>My Tasks</h1>
+<?php foreach ($tasks as $task) : ?>
+	<li>
+		<?php if ($task->completed) : ?>
+			<strike><?= $task->description; ?></strike>
+		<?php else: ?>
+			<?= $task->description; ?>
+		<?php endif; ?>
+	</li>
+<?php endforeach; ?>
+
+<?php require('partials/footer.php'); ?>
